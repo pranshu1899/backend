@@ -56,6 +56,13 @@ app.get("/user/:username/post/:postId", (req, res) => {
    postId: "56"
 }*/
 
+app.get("/search", (req, res) => {
+    console.log(req.query);
+    console.log(req.query.name);
+    console.log(req.query.age);
+    res.send("Done");
+});
+
 app.listen(3000, () => {
     console.log("Server Running... ");
 });
